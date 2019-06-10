@@ -12,12 +12,14 @@ class CommentsReceived extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $team;
+    
     /**
      * Create a new message instance.
      *
      * @return void
      */
+    public $team;
+    
     public function __construct(Team $team)
     {
         $this->team = $team;
@@ -31,6 +33,6 @@ class CommentsReceived extends Mailable
      */
     public function build()
     {
-        return $this->view('email.comment_received');    
+        return $this->view('email.comment_received');  
     }
 }
