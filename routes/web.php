@@ -30,3 +30,4 @@ Auth::routes(['verify' => true]);
 
 Route::get('email/user_verification/{id}',['as' => 'verify' , 'uses' => 'LoginController@verify']);
 
+

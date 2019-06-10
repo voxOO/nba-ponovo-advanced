@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Comment;
 use App\Http\Middleware\ForbidenWords;
 use App\Team;
+use App\Mail\CommentsReceived;
 
 
 
@@ -29,6 +30,8 @@ class CommentController extends Controller
         $comment->save();
         
         $team = Team::findOrFail(request('team_id'));
+        \Mail::to($team->email)->send(new CommentsReceived($team));
+        
 
         return view('teams.show',compact('team'));
     }
