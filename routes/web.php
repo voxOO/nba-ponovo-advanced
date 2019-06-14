@@ -31,3 +31,5 @@ Auth::routes(['verify' => true]);
 Route::get('email/user_verification/{id}',['as' => 'verify' , 'uses' => 'LoginController@verify']);
 
 
+Route::get('news/news' , 'NewsController@news');    
+Route::get('news/news/{id}' , 'NewsController@singlenews');

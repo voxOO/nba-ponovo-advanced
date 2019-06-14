@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\News;
 
 class User extends Authenticatable
 {
@@ -43,4 +44,9 @@ class User extends Authenticatable
         'password' => 'required|confirmed|max:100',
         'password_confirmation' => 'required|max:100'
     ];
+
+    public function news () {
+
+        return $this->hasMany(News::class);
+    }
 }
