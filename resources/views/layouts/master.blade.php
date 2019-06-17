@@ -12,6 +12,12 @@
 
 <body>
     @include('partials.navbar')
+    @if ($flash = session('message'))
+        <div class="alert alert-success" role="alert">
+            {{ $flash }}
+        </div>
+    @endif
+
     <div class="container">
         <div class="row">
             <div class="col-sm-8 blog-main">

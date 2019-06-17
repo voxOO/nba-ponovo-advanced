@@ -9,9 +9,9 @@
    <p>{{ 'name: '.$user->name.' email: '.$user->email}}</p>
    
    @foreach($teams as $team)
-   <span class="btn btn-info">
+   <a class="btn btn-info" href="{{ route('single_team' , ['team_id' => $team->id]) }}">
       {{$team->name}}
-   </span>
+   </a>
    @endforeach
 
 @endsection

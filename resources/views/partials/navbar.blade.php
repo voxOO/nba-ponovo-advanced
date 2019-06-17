@@ -15,6 +15,7 @@
     <a class="btn btn-outline-primary" href="/auth/register">Register</a>
     <a href="/teams" class="btn btn-outline-primary">TEAMS</a>
     <a href="/news/news" class="btn btn-outline-primary">NBA NEWS</a>
+    <a href="/news/create_news" class="btn btn-outline-primary">CREATE NEWS</a>
 </div>
 
 @if(count($errors->all()) > 0)

@@ -16,6 +16,11 @@ class News extends Model
         'id','user_id'
     ];
 
+    const STORE_RULES = [
+        'title' => 'required|max:250|string',
+        'content' => 'required|max:10000|string'
+    ];
+
     public function user() {
         return $this->belongsTo(User::class);
     }

@@ -16,13 +16,13 @@
     </div>
 
     <div class="form-group">
-            <label for="name">Email</label>
+            <label for="email">Email</label>
             <input type="text" class="form-control" id="email" name="email">
             @include('partials.error-message' ,['fieldTitle' => 'email'])
     </div>
 
     <div class="form-group">
-            <label for="name">Password</label>
+            <label for="password">Password</label>
             <input 
                 type="password" 
                 class="form-control" 
@@ -33,7 +33,7 @@
     </div>
 
     <div class="form-group">
-            <label for="name">Confirm Password</label>
+            <label for="password_confirmation">Confirm Password</label>
             <input 
                 type="password" 
                 class="form-control" 
