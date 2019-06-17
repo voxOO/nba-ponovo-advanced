@@ -13,8 +13,8 @@
     <a class="btn btn-outline-primary" href="/auth/login">Login</a>
     @endif
     <a class="btn btn-outline-primary" href="/auth/register">Register</a>
-    <div class="navbar "><a href="/teams" class="btn btn-outline-primary">TEAMS</a></div>
-    
+    <a href="/teams" class="btn btn-outline-primary">TEAMS</a>
+    <a href="/news/news" class="btn btn-outline-primary">NBA NEWS</a>
 </div>
 
 @if(count($errors->all()) > 0)

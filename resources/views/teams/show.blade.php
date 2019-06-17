@@ -9,7 +9,11 @@
          <p>{{$team->address}}</p>
          <h5>{{$team->city}}</h5>
     </div>
+
     <hr>
+    <a class="btn btn-outline-info" href="/news/tag_news/{{$team->id}}">News about team</a>
+    <hr>
+
     <ul>
     @foreach ($team->players as $player)
         <li>

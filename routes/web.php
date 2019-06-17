@@ -33,3 +33,4 @@ Route::get('email/user_verification/{id}',['as' => 'verify' , 'uses' => 'LoginCo
 
 Route::get('news/news' , 'NewsController@news');    
 Route::get('news/news/{id}' , 'NewsController@singlenews');
+Route::get('news/tag_news/{team_id}' , 'NewsController@tagnews');
