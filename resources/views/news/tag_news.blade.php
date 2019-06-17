@@ -10,7 +10,7 @@
 <ul>
     @foreach ($teamNews as $news)
         <li>
-            <a href="/news/news/{{$news->id}}">{{$news->title}}</a><br>
+            <a href="/news/news/{{$news->id}}">{{ $news->title }}</a><br>
             {{$news->content}}
         </li>
     @endforeach

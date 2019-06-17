@@ -18,9 +18,10 @@ class NewsController extends Controller
     public function news () {
 
         $news = News::with('user')->orderBy('created_at', 'desc')->paginate(10);
+        $news_team = Team::with('news')->get();
         //dd($news);
         //dd($news->links());
-        return view('news.news', compact('news'));
+        return view('news.news', compact('news','news_team'));
         
     }
 
@@ -41,7 +42,7 @@ class NewsController extends Controller
         // return view ('news.tag_news', compact('teamNews'));
 
         $team = Team::find($team_id);
-        $teamNews = $team->news()->paginate(5);
+        $teamNews = $team->news()->orderBy('created_at', 'desc')->paginate(5);
         //dd($teamNews);
         return view ('news.tag_news', compact('team','teamNews'));
     }
